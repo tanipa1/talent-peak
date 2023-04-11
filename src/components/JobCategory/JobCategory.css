@@ -1,0 +1,24 @@
+.category img {
+    width: 40px;
+    height: 40px;
+}
+
+.category {
+    padding: 30px;
+    background: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
+    border-radius: 8px;
+}
+
+.category h5 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    .category {
+        padding: 20px;
+    }
+}

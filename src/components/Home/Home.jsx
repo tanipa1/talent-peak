@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../Header/Header';
-import JobCategory from '../JobCategory/JobCategory';
 import { useLoaderData } from 'react-router-dom';
+import JobCategory from '../JobCategory/JobCategory';
+import './Home.css';
 
 const Home = () => {
     const jobCat = useLoaderData();
-    console.log(jobCat);
-    const {Jobs, title, img} = jobCat;
+    const [category, setCategory] = useState();
     return (
         <div>
             <div>
                 <Header></Header>
-                <h2>Name: {Jobs}</h2>
-            <p>{title}</p>
+                {/* Job Category */}
+                <div className='job-category'>
+                    <h2>Job Category List</h2>
+                    <p className='describe'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                    <div className='categories'>
+                    {
+                        jobCat.map(category =>
+                            <JobCategory
+                                key={category.id}
+                                category={category}
+                            ></JobCategory>)
+                    }
+                    </div>
+                </div>
+
+                {/* Featured Job */}
+                
             </div>
         </div>
     );

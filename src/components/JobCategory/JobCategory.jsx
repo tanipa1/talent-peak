@@ -1,14 +1,16 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import './JobCategory.css';
 
-const JobCategory = () => {
-    const jobCat = useLoaderData();
-    console.log(jobCat);
-    const {Jobs, title, img} = jobCat;
+const JobCategory = ({category}) => {
+    const {img, Jobs, title} = category;
+
     return (
         <div>
-            <h2>Name: {Jobs}</h2>
-            <p>{title}</p>
+            <div className='category'>
+                <img src={img} alt="" />
+                <h5>{Jobs}</h5>
+                <p>{title}</p>
+            </div>
         </div>
     );
 };
