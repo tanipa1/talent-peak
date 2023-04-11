@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Jobs from '../Jobs/Jobs';
 import './featuredJobs.css';
+import AllJobs from '../AllJobs/AllJobs';
 
-const FeaturedJobs = ({ featured }) => {
+const FeaturedJobs = ({ featured, handleShowAll }) => {
+console.log(handleShowAll);
 
     return (
         <div className='featured'>
@@ -12,16 +14,16 @@ const FeaturedJobs = ({ featured }) => {
             </div>
             <div className='featured-jobs'>
                 {
-                    featured.map(jobs =>
-                        <Jobs
-                            key={jobs.id}
-                            jobs={jobs}
-                        ></Jobs>)
+                    handleShowAll ? 
+                        (featured.slice(0, 4).map(jobs =>
+                            <Jobs
+                                key={jobs.id}
+                                jobs={jobs}
+                            ></Jobs>))
+                        : <AllJobs featured={featured}></AllJobs>
                 }
             </div>
-            <div className='all-btn'>
-                <button className='see-all'>See All Jobs</button>
-            </div>
+
         </div>
     );
 };
