@@ -5,12 +5,15 @@ import img1 from '../../assets/All Images/Vector.png';
 import img2 from '../../assets/All Images/Vector-1.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDollar, faCalendar, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { addToDb } from '../../utilities/fakedb';
 
 const Jobdetails = () => {
     const { jobId } = useParams();
     const jobDatas = useLoaderData();
+    console.log(jobDatas);
     const [jobDetails, setJobDetails] = useState(null);
 
+    // console.log(jobDatas.id);
     useEffect(() => {
         if (jobDatas) {
             const foundJob = jobDatas.find(job => job.id === parseInt(jobId));
@@ -21,8 +24,7 @@ const Jobdetails = () => {
         return <div>Loading.....</div>
     }
     const handleApplyBtn = id => {
-        const jobCategory = jobCategorys.find(category => category.id === id);
-        console.log(jobCategory);
+        addToDb(id)
       };
       
     return (
@@ -53,7 +55,7 @@ const Jobdetails = () => {
                     <p className='md-5 mb-6 font-bold'><FontAwesomeIcon className='text-slate-400 border-solid border-2 border-purple-300 rounded-xl px-1' icon={faPhone} /><span>Phone:</span><span className='text-gray-500 pl-2'>{jobDetails.ContactInfo[0]} </span></p>
                     <p className='md-5 mb-6  font-bold'><FontAwesomeIcon className='text-slate-400 px-1' icon={faEnvelope} /><span>Email:</span><span className='text-gray-500 pl-2'>{jobDetails.ContactInfo[1]} </span></p>
                     <p className='md-5 mb-6 font-bold'><FontAwesomeIcon className='text-slate-400 px-1' icon={faLocationDot} /><span>Address:</span><span className='text-gray-500 pl-2'>{jobDetails.address} </span></p>
-                    <button className='nav-btn btn-sm btn-color border-0 rounded ml-[20%] mt-8 px-4 text-xl'>Apply Now</button>
+                    <button onClick={() => handleApplyBtn(jobDetails.id)} className='nav-btn btn-sm btn-color border-0 rounded ml-[20%] mt-8 px-4 text-xl'>Apply Now</button>
                 </div>
             </div>
         </section>

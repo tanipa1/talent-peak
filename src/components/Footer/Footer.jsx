@@ -6,7 +6,7 @@ const Footer = () => {
         <div className='p-10 bg-neutral-900 text-white mt-20'>
             <footer className="footer container mx-auto pb-6">
                 <div >
-                    <span className="text-5xl font-bold text-white mb-4">JobHunter</span>
+                    <span className="text-5xl font-bold text-white mb-4">TalentPeak</span>
                     <p className="w-[400px] text-xl mb-4">There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
                     <img src={logo} alt="" />
                 </div>
