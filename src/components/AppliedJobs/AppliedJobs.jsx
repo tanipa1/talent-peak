@@ -1,9 +1,10 @@
 import React from 'react';
 
 const AppliedJobs = () => {
+    const jobDetails = JSON.parse(localStorage.getItem('jobDetails'));
     return (
         <div>
-            <h2>Here is Applied Jobs</h2>
+            <h1>jjj</h1>
         </div>
     );
 };

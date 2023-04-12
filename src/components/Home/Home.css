@@ -1,52 +1,27 @@
-.job-category {
-    padding-left: 200px;
-    padding-right: 200px;
-    margin-bottom: 130px;
-    margin-top: 130px;
+.job-cateImg {
+    background: linear-gradient(90deg, rgba(126, 144, 254, 0.1) 0%, rgba(152, 115, 255, 0.1) 100%);
+    width: 70px;
+    height: 70px;
 }
 
-.job-category p {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    color: #757575;
+.card-body h2 {
+    color: #474747;
+    font-weight: 700;
+    font-size: 23px;
 }
 
-.categories {
+.card-body p {
+    color: #A3A3A3;
+}
+
+.Singlecompany {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.job-category h2 {
-    text-align: center;
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 48px;
-}
+.jobcategory:hover {
+    background-position: right center;
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
 
-.describe {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-@media only screen and (max-width: 600px) {
-    .job-category {
-        padding-left: 50px;
-        padding-right: 50px;
-        margin-bottom: 100px;
-        margin-top: 60px;
-    }
-
-    .categories {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    .job-category h2{
-        font-size: 30px;
-    }
 }

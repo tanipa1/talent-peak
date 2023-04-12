@@ -1,22 +1,28 @@
-.answer {
-    padding-left: 200px;
-    padding-right: 200px;
-    margin-top: 50px;
-}
-
-.blog-header h2 {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 32px;
-    text-align: center;
-    margin-left: 350px;
-}
-
-.blog-header {
+.chat-container {
     display: flex;
-    background: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
-}
-.blog-header img{
-    width: 200px;
-}
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .chat {
+    opacity: 0;
+    animation: chat-appear 0.5s ease-out forwards;
+  }
+  
+  .chat-start {
+    margin-right: auto;
+  }
+  
+  @keyframes chat-appear {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
