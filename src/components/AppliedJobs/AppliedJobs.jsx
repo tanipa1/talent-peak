@@ -13,7 +13,7 @@ const AppliedJobs = () => {
         appliedJobs.push(apply);
     }
     return (
-        <div className='mt-12  grid justify-center'>
+        <div className='mt-12 grid justify-center'>
             <div className='grid gap-6'>
                 {
                     appliedJobs.map(applyJob => <Apply
