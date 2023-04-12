@@ -36,7 +36,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn nav-btn">Star Applying</Link>
+                    <Link className="btn nav-btn">Start Applying</Link>
                 </div>
             </div>
         </div>
