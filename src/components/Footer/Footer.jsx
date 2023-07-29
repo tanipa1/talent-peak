@@ -32,7 +32,7 @@ const Footer = () => {
             </footer>
             <footer className="footer px-10 py-4 border-t bg-neutral-900 text-white border-base-300">
                 <div className="items-center grid-flow-col">
-                    <p className='text-slate-400'>@2023 CareerHub. All Rights Reserved</p>
+                    <p className='text-slate-400'>@2023 TalentPeak. All Rights Reserved</p>
                 </div>
                 <div className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">
